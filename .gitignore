@@ -1,0 +1,95 @@
+# --- General ---
+# Operating System files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# IDE / Editor configuration
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw? # Vim swap files
+
+# Log files
+*.log
+logs/
+*.log.*
+
+# Temporary files
+*.tmp
+*~
+
+# --- Sensitive Information (Crucial!) ---
+# Environment variables - DO NOT commit secrets!
+.env
+.env.* # Covers .env.development, .env.production etc.
+.env*.local # Next.js specific for local overrides - NEVER commit these
+secrets/
+*.pem
+*.key
+
+# --- Frontend (Node.js / Next.js) ---
+# Dependencies
+frontend/node_modules/
+
+# Build output / Cache
+frontend/.next/
+frontend/out/ # If using static export `next export`
+frontend/build/ # Common build output dir, sometimes used by other tools
+frontend/dist/ # Another common build output dir
+
+# Debug logs
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/pnpm-debug.log*
+
+# Test output
+frontend/coverage/ # Often used for test coverage reports
+frontend/.nyc_output/
+
+# --- Backend (Python / FastAPI) ---
+# Virtual Environments - Adjust pattern if your venv is named differently or outside 'backend/'
+backend/venv/
+backend/.venv/
+backend/env/
+# Using wildcards for flexibility, though less precise if venvs are elsewhere
+# */venv/
+# */.venv/
+# */env/
+backend/env.bak/
+backend/venv.bak/
+
+# Compiled Python files (These patterns match anywhere in the tree)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Distribution / packaging
+backend/build/ # Python build artifacts
+backend/dist/ # Python distribution artifacts
+backend/*.egg-info/
+backend/*.egg
+backend/*.whl # Python wheels
+
+# Testing
+backend/.pytest_cache/
+backend/htmlcov/ # Common output for pytest-cov HTML reports
+
+# Databases (if using local dev databases like SQLite within backend)
+backend/*.sqlite
+backend/*.sqlite3
+backend/db.sqlite3 # Or whatever your local dev db is named
+
+# Instance folder (Common in Flask, sometimes used in FastAPI projects)
+backend/instance/
+
+# Celery (if using within backend)
+backend/celerybeat-schedule.*
+
+# MyPy cache (if using within backend)
+backend/.mypy_cache/ 
